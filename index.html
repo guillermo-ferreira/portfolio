@@ -62,32 +62,17 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            border: 2px solid transparent;
+            background: var(--white);
+            border: 2px solid;
+            border-image: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) 1;
             border-radius: 24px;
             padding: 16px 24px;
-            background-clip: padding-box;
-            position: relative;
             display: inline-block;
-        }
-
-        .hero h1::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            border-radius: 24px;
-            padding: 2px;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            z-index: -1;
+            color: var(--primary-color);
         }
 
         .hero .subtitle {
@@ -241,13 +226,13 @@
 
         .project-images {
             display: flex;
-            gap: 12px;
+            gap: 16px;
             margin: 16px 0;
         }
 
         .project-image {
-            width: 80px;
-            height: 60px;
+            flex: 1;
+            height: 120px;
             background: var(--light-gray);
             border-radius: 8px;
             border: 1px solid var(--border-color);
@@ -255,8 +240,9 @@
             align-items: center;
             justify-content: center;
             color: var(--secondary-color);
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             text-align: center;
+            font-weight: 500;
         }
 
         .project-link {
@@ -406,7 +392,7 @@
     <header>
         <div class="container">
             <div class="hero">
-                <h1>👋 Hi, I'm Guillermo Ferreira, thanks for dropping in</h1>
+                <h1>👋 Hi, I'm Guillermo Ferreira</h1>
                 <p class="subtitle">Corporate Communications Strategist</p>
                 <p class="tagline">Transitioning into business growth roles, leveraging expertise in product marketing and stakeholder management across EMEA markets.</p>
             </div>
