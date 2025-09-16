@@ -1,0 +1,1075 @@
+<        .skill-card i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        /* Latest Posts Section */
+        .posts {
+            background: #f8f9fa;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 25px;
+        }
+
+        .post-content h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .post-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: white;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #f8f9fa;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #667eea;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 15px;
+            height: 15px;
+            background: #667eea;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .job-title {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .company {
+            color: #333;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        .duration {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .achievements {
+            list-style: none;
+        }
+
+        .achievements li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .achievements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .timeline-item::before {
+                left: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="hero">
+                <h1>Guillermo Ferreira</h1>
+                <p class="subtitle">Corporate Communications Strategist</p>
+                <p class="tagline">Transitioning into business growth roles, leveraging expertise in product marketing and stakeholder management across EMEA markets</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#posts">Latest Posts</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Corporate Communications professional with extensive experience in multi-market stakeholder management across EMEA regions. Currently transitioning into business development and go-to-market roles, bringing a unique perspective from strategic communications to drive business growth.</p>
+                
+                <p>My background spans from corporate narrative development and external communications to sales enablement and cross-functional team coordination. I've successfully managed GTM launches, built business expansion strategies, and facilitated co-sell motions with strategic partners.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>GTM Strategy</h3>
+                        <p>Product launches, messaging alignment, and market expansion across EMEA</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Stakeholder Management</h3>
+                        <p>Multi-market coordination and cross-functional team leadership</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Corporate Communications</h3>
+                        <p>Brand narrative, external communications, and strategic messaging</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Business Development</h3>
+                        <p>Sales enablement, partner coordination, and pipeline development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts Section -->
+    <section id="posts" class="posts">
+        <div class="container">
+            <h2 class="section-title">Latest Posts</h2>
+            <div class="posts-grid">
+                <div class="post-card">
+                    <div class="post-content">
+                        <h3>The Space Sector's Communication Reset</h3>
+                        <p>Exploring how the space industry is transforming its communication strategies to reach broader audiences and drive commercial growth in an increasingly competitive market.</p>
+                        <a href="https://medium.com/@guilleferreira/the-space-sectors-communication-reset-165129778d41" target="_blank" class="read-more">Read on Medium →</a>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <div class="post-content">
+                        <h3>From Communications to Business Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#" class="read-more">Coming Soon →</a>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <div class="post-content">
+                        <h3>Multi-Market GTM Strategies</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <a href="#" class="read-more">Coming Soon →</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://medium.com/@guilleferreira" target="_blank" class="read-more" style="font-size: 1.1rem;">View all posts on Medium →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Side Projects</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem;">Personal initiatives that showcase entrepreneurial thinking and creative problem-solving</p>
+            
+            <div class="project-card">
+                <h3>Kokara - Caravan Co-ownership Platform</h3>
+                <p>Developed comprehensive business plan and landing page for an innovative caravan co-ownership startup. Created market analysis, financial projections, and go-to-market strategy for the shared mobility space in Spain.</p>
+                <div class="project-tags">
+                    <span class="tag">Business Planning</span>
+                    <span class="tag">Market Research</span>
+                    <span class="tag">Landing Page</span>
+                    <span class="tag">Shared Economy</span>
+                </div>
+                <a href="https://kokara-beta.webflow.io/" target="_blank" class="project-link">View Landing Page →</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Poetry Book - Creative Project</h3>
+                <p>Currently finalizing a poetry book with modern design and layout. Managing the entire creative process from writing to design mockups, exploring themes of personal growth and contemporary life experiences.</p>
+                <div class="project-tags">
+                    <span class="tag">Creative Writing</span>
+                    <span class="tag">Design</span>
+                    <span class="tag">Publishing</span>
+                    <span class="tag">Project Management</span>
+                </div>
+                <a href="#" class="project-link">Mockups Coming Soon →</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>The Artist Side - Music Discovery Platform</h3>
+                <p>Building a unique platform that reveals the music your favorite artists actually listen to. Combining music curation with artist insights to create a new discovery experience for music enthusiasts.</p>
+                <div class="project-tags">
+                    <span class="tag">Product Concept</span>
+                    <span class="tag">Music Tech</span>
+                    <span class="tag">User Experience</span>
+                    <span class="tag">Content Curation</span>
+                </div>
+                <a href="#" class="project-link">In Development →</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Paradise Cup - Modern Football Tournament</h3>
+                <p>Organizing and branding a regional football tournament in Asturias with a contemporary format and modern digital presence. Managing everything from tournament structure to marketing and participant experience.</p>
+                <div class="project-tags">
+                    <span class="tag">Event Management</span>
+                    <span class="tag">Sports Marketing</span>
+                    <span class="tag">Regional Development</span>
+                    <span class="tag">Branding</span>
+                </div>
+                <a href="#" class="project-link">Landing Page Coming Soon →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="job-title">Business Communication Strategist</div>
+                        <div class="company">Telespazio (Spain, Italy & Germany)</div>
+                        <div class="duration">Oct 2020 - Present</div>
+                        <ul class="achievements">
+                            <li>Built comprehensive business expansion strategy for EMEA markets</li>
+                            <li>Shaped corporate narrative and owned external communications (media, brand, social)</li>
+                            <li>Partnered with Sales/Product teams to align messaging to ICPs and use cases</li>
+                            <li>Coordinated co-sell motions with value-added partners and providers</li>
+                            <li>Led cross-functional rollout of major software update (Product/Eng/Ops)</li>
+                            <li>Opened the first international closed-won deal</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="job-title">Business Development Consultant</div>
+                        <div class="company">CAE GStore (Spain)</div>
+                        <div class="duration">Sep 2019 - Sep 2020</div>
+                        <ul class="achievements">
+                            <li>Executed multi-market inbound/outbound campaigns to support qualified pipeline</li>
+                            <li>Developed sales enablement assets and coordinated partner relationships</li>
+                            <li>Qualified leads using MEDDICC criteria</li>
+                            <li>Supported business development across European markets</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="job-title">Sales Development Representative EMEA</div>
+                        <div class="company">VMware (Spain)</div>
+                        <div class="duration">Jan 2019 - Aug 2019</div>
+                        <ul class="achievements">
+                            <li>Prospected and multi-threaded target accounts with ABM focus</li>
+                            <li>Booked and confirmed sales meetings for Account Executives</li>
+                            <li>Executed targeted outreach campaigns across EMEA markets</li>
+                            <li>Contributed to pipeline development and lead qualification processes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Ready to discuss how my communications and business development experience can contribute to your team's growth.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>gferreiravh@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+34 606 272 438</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-medium"></i>
+                    <a href="https://medium.com/@guilleferreira" target="_blank" style="color: white; text-decoration: none;">Medium Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>TYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Ferreira - Business Development & GTM</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        /* Latest Posts */
+        .posts {
+            background: #f8f9fa;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 25px;
+        }
+
+        .post-content h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .post-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Projects */
+        .projects {
+            background: white;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Experience */
+        .experience {
+            background: #f8f9fa;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item ul {
+            color: #666;
+            padding-left: 20px;
+        }
+
+        .timeline-item li {
+            margin-bottom: 8px;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="hero">
+                <h1>Guillermo Ferreira</h1>
+                <p class="subtitle">Business Development & GTM</p>
+                <p class="tagline">Corporate communications strategist transitioning into business growth roles, with expertise in product marketing and multi-market stakeholder management</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#posts">Latest Posts</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>International Law graduate with extensive experience in corporate communications strategy, currently transitioning into business development and go-to-market roles. Based in EMEA with proven expertise in multi-market stakeholder management.</p>
+                
+                <p>My background spans across product marketing, outreach coordination, and corporate narrative development, with hands-on experience in fast-growing B2B environments. I bring a unique perspective combining strategic communication skills with business growth focus.</p>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Business Development</h3>
+                        <p>GTM strategy, pipeline development, and stakeholder management</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Corporate Communications</h3>
+                        <p>Brand narrative, external communications, and messaging alignment</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Multi-Market Experience</h3>
+                        <p>EMEA operations, international stakeholder coordination</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section id="posts" class="posts">
+        <div class="container">
+            <h2 class="section-title">Latest Posts</h2>
+            <div class="posts-grid">
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop" alt="Business Strategy">
+                    <div class="post-content">
+                        <h3>Transitioning from Communications to Business Development</h3>
+                        <p>Exploring how corporate communications skills translate into business growth opportunities...</p>
+                        <a href="#" class="read-more">Read on Medium →</a>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="GTM Strategy">
+                    <div class="post-content">
+                        <h3>GTM Strategy Lessons from B2B Startups</h3>
+                        <p>Key insights from coordinating go-to-market launches across multiple markets...</p>
+                        <a href="#" class="read-more">Read on Medium →</a>
+                    </div>
+                </div>
+                <div class="post-card">
+                    <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&h=200&fit=crop" alt="Stakeholder Management">
+                    <div class="post-content">
+                        <h3>Multi-Market Stakeholder Management</h3>
+                        <p>Best practices for coordinating across different markets and cultural contexts...</p>
+                        <a href="#" class="read-more">Read on Medium →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="project-card">
+                <h3>B2B SaaS GTM Launch Coordination</h3>
+                <p>Led cross-functional rollout of a major software update coordinating Product, Engineering, and Operations teams. Developed messaging framework and partner coordination strategy that supported qualified pipeline development.</p>
+                <div class="project-tags">
+                    <span class="tag">GTM Strategy</span>
+                    <span class="tag">Cross-functional Leadership</span>
+                    <span class="tag">B2B SaaS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Multi-Market Business Expansion Strategy</h3>
+                <p>Built comprehensive business expansion strategy for EMEA markets, including stakeholder mapping, messaging alignment, and co-sell motion coordination with value-added partners.</p>
+                <div class="project-tags">
+                    <span class="tag">Business Strategy</span>
+                    <span class="tag">Market Expansion</span>
+                    <span class="tag">Partner Management</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Corporate Communications Framework</h3>
+                <p>Developed and implemented corporate narrative, tone of voice, and positioning strategy. Owned external communications including media relations, brand management, and social media strategy.</p>
+                <div class="project-tags">
+                    <span class="tag">Corporate Communications</span>
+                    <span class="tag">Brand Strategy</span>
+                    <span class="tag">Content Strategy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Business Communication Strategist</h3>
+                    <div class="company">Telespazio (Spain, Italy & Germany)</div>
+                    <div class="date">Oct 2020 - Present</div>
+                    <ul>
+                        <li>Built business expansion strategy and coordinated GTM launches</li>
+                        <li>Booked and confirmed sales meetings for Account Executives</li>
+                        <li>Shaped corporate narrative and owned external communications (media, brand, social)</li>
+                        <li>Partnered with Sales/Product teams to align messaging to ICPs and use cases</li>
+                        <li>Coordinated co-sell motions with value-added partners/providers</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Business Development Consultant</h3>
+                    <div class="company">CAE GStore (Spain)</div>
+                    <div class="date">Sep 2019 - Sep 2020</div>
+                    <ul>
+                        <li>Qualified leads using MEDDICC criteria</li>
+                        <li>Opened the first international closed-won deal</li>
+                        <li>Developed brand narrative, tone of voice, and positioning</li>
+                        <li>Created sales enablement assets and coordinated partner relationships</li>
+                        <li>Led cross-functional rollout of major software updates</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Sales Development Representative EMEA</h3>
+                    <div class="company">VMware (Spain)</div>
+                    <div class="date">Jan 2019 - Aug 2019</div>
+                    <ul>
+                        <li>Prospected and multi-threaded target accounts with ABM focus</li>
+                        <li>Executed multi-market inbound/outbound campaigns to support qualified pipeline</li>
+                        <li>Coordinated stakeholder management across EMEA markets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>Interested in discussing business development opportunities or collaboration?</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:gferreiravh@gmail.com">gferreiravh@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+34606272438">+34 606 272 438</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="#" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-medium"></i>
+                    <a href="#" target="_blank">Medium Articles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.backdropFilter = 'blur(10px)';
+            } else {
+                nav.style.background = 'white';
+                nav.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.skill-card, .post-card, .project-card, .timeline-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
