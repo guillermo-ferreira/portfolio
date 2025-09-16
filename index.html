@@ -66,6 +66,28 @@
             font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border: 2px solid transparent;
+            border-radius: 24px;
+            padding: 16px 24px;
+            background-clip: padding-box;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            border-radius: 24px;
+            padding: 2px;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            z-index: -1;
         }
 
         .hero .subtitle {
@@ -133,29 +155,7 @@
             margin-bottom: 24px;
         }
 
-        .skills-list {
-            margin-top: 48px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-        }
 
-        .skill-item {
-            padding: 0;
-        }
-
-        .skill-item h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-
-        .skill-item p {
-            font-size: 0.95rem;
-            color: var(--secondary-color);
-            line-height: 1.6;
-        }
 
         /* Posts Section */
         .posts {
@@ -239,20 +239,24 @@
             margin-bottom: 16px;
         }
 
-        .project-tags {
+        .project-images {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
+            gap: 12px;
+            margin: 16px 0;
         }
 
-        .tag {
+        .project-image {
+            width: 80px;
+            height: 60px;
             background: var(--light-gray);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--secondary-color);
-            padding: 4px 12px;
-            border-radius: 16px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.8rem;
+            text-align: center;
         }
 
         .project-link {
@@ -388,9 +392,7 @@
                 padding: 60px 0;
             }
 
-            .skills-list {
-                grid-template-columns: 1fr;
-            }
+
 
             .contact-links {
                 flex-direction: column;
@@ -404,7 +406,7 @@
     <header>
         <div class="container">
             <div class="hero">
-                <h1>Guillermo Ferreira</h1>
+                <h1>👋 Hi, I'm Guillermo Ferreira, thanks for dropping in</h1>
                 <p class="subtitle">Corporate Communications Strategist</p>
                 <p class="tagline">Transitioning into business growth roles, leveraging expertise in product marketing and stakeholder management across EMEA markets.</p>
             </div>
@@ -429,28 +431,7 @@
         <div class="container">
             <h2 class="section-title">About</h2>
             <div class="about-content">
-                <p>Corporate Communications professional with extensive experience in multi-market stakeholder management across EMEA regions. Currently transitioning into business development and go-to-market roles, bringing a unique perspective from strategic communications to drive business growth.</p>
-                
                 <p>My background spans from corporate narrative development and external communications to sales enablement and cross-functional team coordination. I've successfully managed GTM launches, built business expansion strategies, and facilitated co-sell motions with strategic partners.</p>
-                
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <h3>GTM Strategy</h3>
-                        <p>Product launches, messaging alignment, and market expansion across EMEA</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Stakeholder Management</h3>
-                        <p>Multi-market coordination and cross-functional team leadership</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Corporate Communications</h3>
-                        <p>Brand narrative, external communications, and strategic messaging</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Business Development</h3>
-                        <p>Sales enablement, partner coordination, and pipeline development</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -458,7 +439,7 @@
     <!-- Writing Section -->
     <section id="posts" class="posts">
         <div class="container">
-            <h2 class="section-title">Writing</h2>
+            <h2 class="section-title">Recent Writings</h2>
             
             <div class="post-item">
                 <h3>The Space Sector's Communication Reset</h3>
@@ -492,11 +473,10 @@
             <div class="project-item">
                 <h3>Kokara - Caravan Co-ownership Platform</h3>
                 <p>Developed comprehensive business plan and landing page for an innovative caravan co-ownership startup. Created market analysis, financial projections, and go-to-market strategy for the shared mobility space in Spain.</p>
-                <div class="project-tags">
-                    <span class="tag">Business Planning</span>
-                    <span class="tag">Market Research</span>
-                    <span class="tag">Landing Page</span>
-                    <span class="tag">Shared Economy</span>
+                <div class="project-images">
+                    <div class="project-image">Landing</div>
+                    <div class="project-image">Business Plan</div>
+                    <div class="project-image">Market Research</div>
                 </div>
                 <a href="https://kokara-beta.webflow.io/" target="_blank" class="project-link">View Project →</a>
             </div>
@@ -504,10 +484,10 @@
             <div class="project-item">
                 <h3>Poetry Book</h3>
                 <p>Currently finalizing a poetry book with modern design and layout. Managing the entire creative process from writing to design mockups, exploring themes of personal growth and contemporary life experiences.</p>
-                <div class="project-tags">
-                    <span class="tag">Creative Writing</span>
-                    <span class="tag">Design</span>
-                    <span class="tag">Publishing</span>
+                <div class="project-images">
+                    <div class="project-image">Cover Design</div>
+                    <div class="project-image">Layout</div>
+                    <div class="project-image">Mockup</div>
                 </div>
                 <a href="#" class="project-link">Coming Soon →</a>
             </div>
@@ -515,10 +495,10 @@
             <div class="project-item">
                 <h3>The Artist Side</h3>
                 <p>Building a unique platform that reveals the music your favorite artists actually listen to. Combining music curation with artist insights to create a new discovery experience for music enthusiasts.</p>
-                <div class="project-tags">
-                    <span class="tag">Product Concept</span>
-                    <span class="tag">Music Tech</span>
-                    <span class="tag">User Experience</span>
+                <div class="project-images">
+                    <div class="project-image">UI Design</div>
+                    <div class="project-image">Concept</div>
+                    <div class="project-image">Wireframes</div>
                 </div>
                 <a href="#" class="project-link">In Development →</a>
             </div>
@@ -526,10 +506,10 @@
             <div class="project-item">
                 <h3>Paradise Cup</h3>
                 <p>Organizing and branding a regional football tournament in Asturias with a contemporary format and modern digital presence. Managing everything from tournament structure to marketing and participant experience.</p>
-                <div class="project-tags">
-                    <span class="tag">Event Management</span>
-                    <span class="tag">Sports Marketing</span>
-                    <span class="tag">Regional Development</span>
+                <div class="project-images">
+                    <div class="project-image">Branding</div>
+                    <div class="project-image">Landing</div>
+                    <div class="project-image">Marketing</div>
                 </div>
                 <a href="#" class="project-link">Coming Soon →</a>
             </div>
@@ -597,6 +577,7 @@
                 <div class="contact-links">
                     <a href="mailto:gferreiravh@gmail.com" class="contact-link">Email</a>
                     <a href="tel:+34606272438" class="contact-link">Phone</a>
+                    <a href="https://www.linkedin.com/in/guillermo-ferreira/" target="_blank" class="contact-link">LinkedIn</a>
                     <a href="https://medium.com/@guilleferreira" target="_blank" class="contact-link">Medium</a>
                 </div>
             </div>
