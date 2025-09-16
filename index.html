@@ -62,17 +62,28 @@
         }
 
         .hero h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.02em;
             background: var(--white);
-            border: 2px solid;
-            border-image: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) 1;
-            border-radius: 24px;
             padding: 16px 24px;
             display: inline-block;
             color: var(--primary-color);
+            position: relative;
+            border-radius: 24px;
+        }
+
+        .hero h1::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border-radius: 24px;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
         }
 
         .hero .subtitle {
@@ -392,7 +403,7 @@
     <header>
         <div class="container">
             <div class="hero">
-                <h1>👋 Hi, I'm Guillermo Ferreira</h1>
+                <h1>👋 Hi, I'm Guillermo Ferreira, thanks for dropping in</h1>
                 <p class="subtitle">Corporate Communications Strategist</p>
                 <p class="tagline">Transitioning into business growth roles, leveraging expertise in product marketing and stakeholder management across EMEA markets.</p>
             </div>
